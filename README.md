@@ -1,4 +1,5 @@
-iviedsky.github.io
-==================
+#jekylll blog
 
-My Tech Blog
+### 基于jekyll的blog
+### 使用bootstrap框架
+### font-awesome
