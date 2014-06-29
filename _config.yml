@@ -1,8 +1,9 @@
 # Site settings
-title: My Blog In Jekyll
+title: 陈嗣圣的个人博客 iviedsky 
 email: iviedsky@gmail.com
-description: "我的博客-Jekyll学习测试中"
+description: "陈嗣圣的个人博客"
 baseurl: ""
+username: "iviedsky"
 
 # Build settings
 markdown: kramdown
