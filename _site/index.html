@@ -116,15 +116,61 @@
                 2014
                 </div>
             </div> 
-        <h1>我的博客</h1>
+        <hr />
+
+<h2>Chrome扩展应用——解析友盟崩溃日志[编辑中...]</h2>
 
 <hr />
 
-<p>我的第一篇博客</p>
+<h3>一、背景：</h3>
+
+<p>当iOS应用程序接入友盟统计后，我们可以在友盟网站"错误分析->错误详情"页面看到应用程序的Crash Log。</p>
+
+<p>然而，在该页面中看到的日志，是未经过Debug Symbol(dSYM)文件中符号表转化的,可读性并不高。</p>
+
+<p>所以，博主编写了一个Chrome扩展应用，用于在页面中将Crash Log直接进行翻译。</p>
+
+<p>翻译前，页面内容如下：</p>
+
+<p><img src="/image/umeng_extension_02.png" height="1200" width="800" alt="翻译前" /></p>
+
+<p>翻译后，页面内容如下：</p>
+
+<p><img src="/image/umeng_extension_03.png" height="1200" width="800" alt="翻译后" /></p>
+
+<hr />
+
+<h3>二、解决方案：</h3>
+
+<p>1、打开友盟统计错误详情页面以后，点击Chrome扩展应用。Chrome扩展应用读取页面中Crash Log相关的信息，并发送至服务端。</p>
+
+<p>2、服务端根据保存的dSYM文件和app文件，翻译Crash日志，并将翻译后的内容返回。</p>
+
+<p>3、Chrome扩展程序将服务端返回的内容写回到页面中。</p>
+
+<p>下图中，实线表示客户端请求，虚线表示服务端响应</p>
+
+<p><img src="/image/umeng_extension_01.png" height="600" width="400" alt="结构图" /></p>
+
+<hr />
+
+<h3>三、服务端：</h3>
+
+<p>技术方案：语言 - Python，HTTP服务器和框架 - Tornado</p>
+
+<hr />
+
+<h3>四、Web客户端：</h3>
+
+<p>技术方案：语言 - JavaScript，平台 - Chrome</p>
+
+<hr />
+
+<h3>五、总结</h3>
 
 
     <div class = "read_more">
-        <a class="fa fa-link" href="/2014/06/30/my_first_blog">  查看全文&hellip;</a>
+        <a class="fa fa-link" href="/2014/06/30/umeng_crash_chrome_extension">  查看全文&hellip;</a>
     </div>
     
 </div>
