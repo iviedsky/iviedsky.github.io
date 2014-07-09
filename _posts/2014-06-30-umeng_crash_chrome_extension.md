@@ -18,7 +18,7 @@ tags : [Chrome扩展应用, Python, Tornado]
 然而，在该页面中看到的日志，是未经过Debug Symbol(dSYM)文件中符号表转化的,可读性并不高。
 
 所以，博主编写了一个Chrome扩展应用，用于在页面中将Crash Log直接进行翻译。
-
+<!--break-->
 翻译前，页面内容如下：
 
 ![翻译前](/image/umeng_extension_02.png =800x1200)
