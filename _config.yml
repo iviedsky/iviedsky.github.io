@@ -19,12 +19,12 @@ safe: false
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : 陈嗣圣的博客 iviedsky 
+title : iviedsky 
 tagline: Site Tagline
 author :
   name : 陈嗣圣 
   email : iviedsky@gmail.com
-  github : username
+  github : iviedsky
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -34,7 +34,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://iviedsky.github.io/blog/
+production_url : http://iviedsky.github.io/
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
