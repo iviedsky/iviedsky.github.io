@@ -1,15 +1,17 @@
 ---
 layout: post
-title: Chrome扩展应用——解析友盟崩溃日志 
-category : 代码 
+title: 解析友盟iOS客户端崩溃日志 
+category : 开发工具 
 tagline: "Supporting tagline"
-tags : [Chrome扩展应用, 开发工具]
+tags : [Chrome扩展应用, iOS]
 markdown: rdiscount
 ---
 {% include JB/setup %}
 ---
 
-##Chrome扩展应用——解析友盟崩溃日志 
+##解析友盟iOS客户端崩溃日志
+
+###——Chrome扩展程序以及Python后台
 
 ------
 ###一、背景：
