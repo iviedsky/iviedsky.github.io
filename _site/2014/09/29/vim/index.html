@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Vim命令</title>
+    
+    <meta name="author" content="陈嗣圣">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/prettify.css" rel="stylesheet" type="text/css">
+    <script src="/assets/themes/twitter/js/prettify.js"></script>
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    
+<!--    font-awesome-->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  </head>
+
+  <body onload="prettyPrint()">
+    <div class="navbar">
+      <div class="navbar-inner">
+       <div class="nav-narrow">
+          <a class="brand" href="/"><span class="fa fa-mortar-board (alias)">iviedsky</span></a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/archive.html">文章</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">分类</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">标签</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+<!--
+<div class="page-header">
+  <h1>Vim命令 <small>Supporting tagline</small></h1>
+</div>
+-->
+ 
+
+<div class="row-fluid post-full">
+  <div class="span12 ">
+    <div class="content card">
+        <div class="date_label">
+          <div class="day_month">
+          09/29
+          </div>
+          <div class="year">
+          2014
+          </div>
+        </div>
+      <hr />
+
+<h2>Vim命令合集</h2>
+
+<hr />
+
+<h3>历史命令</h3>
+
+<p>以:和/开头的命令都有历史记录，可以首先键入:或者/然后按上下箭头来选择某个历史命令。</p>
+
+<h3>启动vim</h3>
+
+<p>在命令行窗口输入以下命令即可</p>
+
+<p>vim  直接启动vim</p>
+
+<p>vim filename 打开vim或者创建名为filename的文件</p>
+
+<!--break-->
+
+
+<h3>文件命令</h3>
+
+<p>打开单个文件</p>
+
+<p>vim file</p>
+
+<p>同时打开多个文件</p>
+
+<p>vim file1 file2 file3</p>
+
+<p>在当前vim窗口中打开一个新文件。（当前已经打开的文件会关闭，如果改动，会提示保存）</p>
+
+<p>:open file</p>
+
+<p>在分栏打开文件</p>
+
+<p>:split file</p>
+
+<p>:vsplit file (纵向打开)</p>
+
+<p>切换到下一个文件分栏(n->next)</p>
+
+<p>:bn</p>
+
+<p>切换到上一个文件分栏(p->previous)</p>
+
+<p>:bp</p>
+
+<p>Ctrl+ww 移动到下一个窗口</p>
+
+<p>Ctrl+wj 移动到下方的窗口</p>
+
+<p>Ctrl+wk 移动到上方的窗口</p>
+
+<p>打开远程文件，比如ftp或者share folder</p>
+
+<p>:e ftp://xxx.xxx.xx.xx/demo</p>
+
+<p>:e \xxxxx\demo</p>
+
+<h3>vim的模式</h3>
+
+<p>正常模式(按ESC或者Ctrl+[进入) 左下角显示文件名或为空</p>
+
+<p>插入模式(按i进入) 左下角显示 --INSERT--</p>
+
+<p>可视模式(按Ctrl+v/Shift+v进入) 左下角显示 --VISUAL--</p>
+
+<h3>导航命令</h3>
+
+<p>% 定位到成对的括号另一个符号的位置，适用于大括号、小括号和方括号</p>
+
+<h3>插入命令</h3>
+
+<p>i 在当前位置插入</p>
+
+<p>I 在当前行首插入</p>
+
+<p>a 在当前位置后插入</p>
+
+<p>A 在当前行尾插入</p>
+
+<p>o 在当前行之后插入一行</p>
+
+<p>O 在当前行之前插入一行</p>
+
+<h3>查找命令</h3>
+
+<p>/text 查找text，按n键查找下一个，按N键查找上一个</p>
+
+<p>?text 查找text，反向查找（查找当前光标所在位置之前的），按n键查找下一个，按N键查找上一个</p>
+
+<p>说明：在vim中，有一些特殊字符在查找时需要转义 .*[]^%?~$</p>
+
+<p>:set ignorecase 忽略大小写查找</p>
+
+<p>:set noignorecase 不忽略大小写查找</p>
+
+<h3>替换命令</h3>
+
+<p>ra 将光标所在处的字符替换为a</p>
+
+<p>s/old/new/ 用new替换old，替换当前行的第一个匹配</p>
+
+<p>s/old/new/g 用new替换old，替换当前行的所有匹配</p>
+
+<p>%s/old/new/ 用new替换old，替换所有行的第一个匹配</p>
+
+<p>%s/old/new/g 用new替换old，替换整个文件的所有匹配</p>
+
+<p>:10,20 s/^/#/ 将第10行到20行的代码注释掉（python）</p>
+
+<h3>移动命令</h3>
+
+<p>h 左移一个字符</p>
+
+<p>l 右移一个字符，这个命令很少用，一般用w代替。</p>
+
+<p>k 上移一个字符</p>
+
+<p>j 下移一个字符</p>
+
+<p>以上四个命令可以配合数字使用，比如20j就是向下移动20行，5h就是向左移动5个字符，在Vim中，很多命令都可以配合数字使用，比如删除10个字符10x，在当前位置后插入3个！，3a！<Esc>，这里的Esc是必须的，否则命令不生效。</p>
+
+<p>w 向前移动一个单词（光标停在单词首部），如果已到行尾，则转至下一行行首。此命令快，可以代替l命令。</p>
+
+<p>b 向后移动一个单词 2b 向后移动2个单词</p>
+
+<p>e，同w，只不过是光标停在单词尾部</p>
+
+<p>ge，同b，光标停在单词尾部。</p>
+
+<p>^ 移动到本行第一个非空白字符上。</p>
+
+<p>0（数字0）移动到本行第一个字符上，</p>
+
+<p><HOME> 移动到本行第一个字符。同0健。</p>
+
+<p>$ 移动到行尾 3$ 移动到下面3行的行尾</p>
+
+<p>gg 移动到文件头。 = [[</p>
+
+<p>G（shift + g） 移动到文件尾。 = ]]</p>
+
+<p>f（find）命令也可以用于移动，fx将找到光标后第一个为x的字符，3fd将找到第三个为d的字符。</p>
+
+<p>F 同f，反向查找。</p>
+
+<p>跳到指定行，冒号+行号，回车，比如跳到240行就是 :240回车。另一个方法是行号+G，比如230G跳到230行。</p>
+
+<p>Ctrl + e 向下滚动一行</p>
+
+<p>Ctrl + y 向上滚动一行</p>
+
+<p>Ctrl + d 向下滚动半屏</p>
+
+<p>Ctrl + u 向上滚动半屏</p>
+
+<p>Ctrl + f 向下滚动一屏</p>
+
+<p>Ctrl + b 向上滚动一屏</p>
+
+<h3>撤销和重做</h3>
+
+<p>u 撤销（Undo）</p>
+
+<p>U 撤销对正行的操作</p>
+
+<p>Ctrl + r 重做（Redo）</p>
+
+<h3>删除命令</h3>
+
+<p>x 删除当前字符</p>
+
+<p>3x 删除当前光标开始向后三个字符</p>
+
+<p>X 删除当前字符的前一个字符。X=dh</p>
+
+<p>dl 删除当前字符， dl=x</p>
+
+<p>dh 删除前一个字符</p>
+
+<p>dd 删除当前行</p>
+
+<p>dj 删除当前行以及上一行</p>
+
+<p>dk 删除当前行以及下一行</p>
+
+<p>10d 删除当前行以及接下来的10行。</p>
+
+<p>D 删除当前字符至行尾。D=d$</p>
+
+<p>d$ 删除当前字符之后的所有字符（本行）</p>
+
+<p>dgg 删除当前行以及之前所有行</p>
+
+<p>dG（jd shift + g）   删除当前行以及之后所有行</p>
+
+<p>:1,10d 删除1-10行</p>
+
+<p>:11,$d 删除11行及以后所有的行</p>
+
+<p>:1,$d 删除所有行</p>
+
+<p>J(shift + j)　　删除两行之间的换行符，实际上是合并两行。</p>
+
+<h3>拷贝和粘贴</h3>
+
+<p>yy 拷贝当前行</p>
+
+<p>nyy 拷贝当前后开始的n行，比如2yy拷贝当前行及其下一行。</p>
+
+<p>p 在当前光标后粘贴,如果之前使用了yy命令来复制一行，那么就在当前行的下一行粘贴。</p>
+
+<p>P 在当前行前粘贴</p>
+
+<p>:1,10 co 20 将1-10行拷贝一份并插入到第20行之后。</p>
+
+<h3>剪切命令</h3>
+
+<p>正常模式下按v（逐字）或V（逐行）进入可视模式，然后用jklh命令移动即可选择某些行或字符，再按d即可剪切</p>
+
+<p>ndd 剪切当前行之后的n行。利用p命令可以对剪切的内容进行粘贴</p>
+
+<p>:1,10d 将1-10行剪切。利用p命令可将剪切后的内容进行粘贴。</p>
+
+<p>:1, 10 m 20 将第1-10行移动到第20行之后。</p>
+
+<h3>退出命令</h3>
+
+<p>:wq 保存并退出</p>
+
+<p>ZZ 保存并退出</p>
+
+<p>:q! 强制退出并忽略所有更改</p>
+
+<p>:e! 放弃所有修改，并打开原来文件。</p>
+
+    </div>
+
+ 
+<!--
+    <ul class="tag_box inline ">
+      <li><i class="icon-folder-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#工具-ref">
+    		工具 <span>1</span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+    
+
+  
+    <ul class="tag_box inline ">
+      <li><i class="icon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#工具-ref">工具 <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#速查手册-ref">速查手册 <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    -->
+    
+    <div class="pagination clearfix">
+      <ul class = "pull-right">
+      
+        <li class="prev"><a class="fa fa-arrow-circle-left" href="/2014/07/17/think-of-inherit" title="面向对象的程序设计（一）——关于继承"> 前一篇</a></li>
+      
+        <li><a class="fa fa-th" href="/archive.html"> 所有日志</a></li>
+      
+        <li class="next disabled"><a >后一篇 <span class="fa fa-arrow-circle-right">  </span></a>
+      
+      </ul>
+    </div>
+    
+    
+
+
+  <!-- Duoshuo Comment BEGIN -->
+    <div id="comments">
+        <div class="ds-thread" data-thread-key="/2014/09/29/vim"  data-title="Vim命令 - iviedsky"></div>
+    </div>
+
+<script>var duoshuoQuery = {short_name:"iviedsky"};</script>
+<script src="http://static.duoshuo.com/embed.js"></script>
+<!-- Duoshuo Comment END -->
+
+
+
+
+
+  </div>
+</div>
+
+
+      </div>
+      
+      <footer class="card clearfix">
+        <span style="font-size:30px;"class="fa fa-github pull-left"></span><a href="https://github.com/iviedsky/blog" style="display:inline-block;padding-right:80px;border-right:1px solid #bbb">fork me on GitHub</a>
+        <p class="pull-right">&copy; 2014 陈嗣圣
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+        
+      </footer>
+
+    </div>
+
+    <!--多说js加载开始，一个页面只需要加载一次 -->
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:""};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+    </script>
+    <!--多说js加载结束，一个页面只需要加载一次 -->
+
+
+    
+  </body>
+</html>
+
