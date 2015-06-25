@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>首页</title>
+    <title>Mac OSX FTP服务的搭建</title>
     
     <meta name="author" content="陈嗣圣">
 
@@ -91,61 +91,23 @@
         
 <!--
 <div class="page-header">
-  <h1>首页 </h1>
+  <h1>Mac OSX FTP服务的搭建 <small>Supporting tagline</small></h1>
 </div>
 -->
+ 
 
-<div class="row-fluid">
-  <div class="span12">
-    
-
-<div class = "card">
-        <div  class = "date_label">
-            <div class="day_month">
-                04/29
-                </div>
-                <div class="year">
-                2015
-                </div>
-            </div> 
-        <hr />
-
-<h2>Vim命令合集</h2>
-
-<hr />
-
-<h3>历史命令</h3>
-
-<p>以:和/开头的命令都有历史记录，可以首先键入:或者/然后按上下箭头来选择某个历史命令。</p>
-
-<h3>启动vim</h3>
-
-<p>在命令行窗口输入以下命令即可</p>
-
-<p>vim  直接启动vim</p>
-
-<p>vim filename 打开vim或者创建名为filename的文件</p>
-
-
-    <div class = "read_more">
-        <a class="fa fa-link" href="/2015/04/29/vim">  查看全文&hellip;</a>
-    </div>
-    
-</div>
-
-
-
-
-<div class = "card">
-        <div  class = "date_label">
-            <div class="day_month">
-                03/03
-                </div>
-                <div class="year">
-                2015
-                </div>
-            </div> 
-        <hr />
+<div class="row-fluid post-full">
+  <div class="span12 ">
+    <div class="content card">
+        <div class="date_label">
+          <div class="day_month">
+          03/03
+          </div>
+          <div class="year">
+          2015
+          </div>
+        </div>
+      <hr />
 
 <h2>Mac OSX FTP服务的搭建</h2>
 
@@ -173,82 +135,98 @@
 
 <p>请参考<a href="http://stackoverflow.com/questions/9694395/sudo-port-command-not-found">这里</a>的解决方法。</p>
 
+<!--break-->
 
-    <div class = "read_more">
-        <a class="fa fa-link" href="/2015/03/03/macftp">  查看全文&hellip;</a>
+
+<h3>三、通过Ports安装vsftpd</h3>
+
+<p>sudo port install vsftpd</p>
+
+<h3>四、生成vsftpd的配置文件</h3>
+
+<p>创建一个新的配置文件，对vsftpd进行配置。当vsftpd安装成功后，一份示例配置文件已经在目录/opt/local/etc/中预置，通过以下指令，我们可以直接使用它。</p>
+
+<p>sudo cp /opt/local/etc/vsftpd.conf.sample /opt/local/etc/vsftpd.conf</p>
+
+<h3>五、进一步配置vsftpd的配置文件</h3>
+
+<p>由于博主搭建的FTP服务器，是在内网中使用，并且目的是存放应用程序包文件。所以允许匿名访问，而且匿名用户有读写权限，对项目组来说比较方便。</p>
+
+<p>具体配置过程参考了<a href="http://blog.chinaunix.net/uid-24625974-id-2845256.html">vsftpd.conf 详解与实例配置</a>。</p>
+
+<h3>六、Tips</h3>
+
+<p>最后，在匿名用户读写权限上还遇到了一个小问题——</p>
+
+<p>为了让匿名用户可以上传文件，博主将FTP的根目录权限设置为可读可写，但是报错如下:</p>
+
+<p>refusing to run with writable root inside chroot</p>
+
+<p>原来，由于安全性问题，新版本的vsftpd要求根目录不允许有写权限，但是子目录可以有写权限。所以，仅设置子目录的读写权限即可。</p>
+
+    </div>
+
+ 
+<!--
+    <ul class="tag_box inline ">
+      <li><i class="icon-folder-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#工具-ref">
+    		工具 <span>2</span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+    
+
+  
+    <ul class="tag_box inline ">
+      <li><i class="icon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#工具-ref">工具 <span>2</span></a></li>
+    
+  
+
+
+
+    </ul>
+    -->
+    
+    <div class="pagination clearfix">
+      <ul class = "pull-right">
+      
+        <li class="prev"><a class="fa fa-arrow-circle-left" href="/2015/02/04/think-of-inherit" title="面向对象的程序设计（一）——关于继承、抽象、多态和面向对象的设计原则"> 前一篇</a></li>
+      
+        <li><a class="fa fa-th" href="/archive.html"> 所有日志</a></li>
+      
+        <li class="next"><a  href="/2015/04/29/vim" title="Vim命令">后一篇 <span class="fa fa-arrow-circle-right">  </span></a></li>
+      
+      </ul>
     </div>
     
-</div>
-
-
-
-
-<div class = "card">
-        <div  class = "date_label">
-            <div class="day_month">
-                02/04
-                </div>
-                <div class="year">
-                2015
-                </div>
-            </div> 
-        <hr />
-
-<h2>面向对象的程序设计（一）</h2>
-
-<h3>——关于继承、抽象、多态和面向对象的设计原则</h3>
-
-<hr />
-
-<h3>一、面向对象的程序设计：</h3>
-
-<p>博主编写“面向对象的程序设计”系列，主要目的在于分享博主在设计过程中遇到的一些典型错误。</p>
-
-<p>文章的主要内容是博主在修正这些错误的过程中进行的归纳、思考和总结的产物，包括参考的官方文档和网络资料的引用，以及楼主的一些个人总结。</p>
-
-<p>博主希望这一过程不但会使自己进一步加深对软件设计的理解，而且能够和各位同行们相互学习探讨，相互进步。</p>
-
-
-    <div class = "read_more">
-        <a class="fa fa-link" href="/2015/02/04/think-of-inherit">  查看全文&hellip;</a>
-    </div>
     
+
+
+  <!-- Duoshuo Comment BEGIN -->
+<div id="comments">
+<div class="ds-thread" data-thread-key="/2015/03/03/macftp"  data-title="Mac OSX FTP服务的搭建 - iviedsky"></div>
 </div>
+<!-- Duoshuo Comment END -->
 
 
 
-
-<div class = "card">
-        <div  class = "date_label">
-            <div class="day_month">
-                01/03
-                </div>
-                <div class="year">
-                2015
-                </div>
-            </div> 
-        <hr />
-
-<h2>解析友盟iOS客户端崩溃日志</h2>
-
-<h3>——Chrome扩展程序以及Python后台</h3>
-
-<hr />
-
-<h3>一、背景：</h3>
-
-<p>当iOS应用程序接入友盟统计后，我们可以在友盟网站"错误分析->错误详情"页面看到应用程序的Crash Log。</p>
-
-<p>然而，在该页面中看到的日志，是未经过Debug Symbol(dSYM)文件中符号表转化的,可读性并不高。</p>
-
-<p>所以，博主编写了一个Chrome扩展应用，用于在页面中将Crash Log直接进行翻译。</p>
-
-
-    <div class = "read_more">
-        <a class="fa fa-link" href="/2015/01/03/umeng_crash_chrome_extension">  查看全文&hellip;</a>
-    </div>
-    
-</div>
 
 
 
