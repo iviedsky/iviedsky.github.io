@@ -1,8 +1,7 @@
 <!-- Duoshuo Comment BEGIN -->
-    <div id="comments">
-        <div class="ds-thread" {% if page.id %}data-thread-key="{{ page.id }}"{% endif %}  data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}"></div>
-    </div>
-
-<script>var duoshuoQuery = {short_name:"iviedsky"};</script>
-<script src="http://static.duoshuo.com/embed.js"></script>
+<div id="comments">
+<div class="ds-thread" {% if page.id %}data-thread-key="{{ page.id }}"{% endif %}  data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}"></div>
+</div>
 <!-- Duoshuo Comment END -->
+
+
